@@ -1,0 +1,18 @@
+<script>
+    class A{
+        display(){
+            document.writeln("a is invoked")
+        }
+    }
+
+    class B extends A{
+        display(){
+            document.writeln("b is invoked")
+        }
+    }
+    var a=[new A(), new B()]
+    a.forEach(function (msg) {
+        msg.display();
+        
+    })
+</script>
