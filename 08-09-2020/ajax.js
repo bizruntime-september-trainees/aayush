@@ -12,7 +12,7 @@ function buttonclickhandler() {
     const xhr = new XMLHttpRequest();
 
     xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true);
-    //xhr.open('POST','http://dummy.restapiexample.com/api/v1/create',true);
+    xhr.open('POST','http://dummy.restapiexample.com/api/v1/create',true);
     xhr.getResponseHeader('content-type', 'application/json')
 
     xhr.onprogress = function () {
