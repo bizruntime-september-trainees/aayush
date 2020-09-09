@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="ind.js"></script>
+<input type="text" placeholder="your message here" id="text">
+    <button>say hello</button>
+<div id="log"></div>
+
+    <script>
+        var sock = new WebSocket("ws://localhost:5002");
+        var log= getElementById("log");
+
+      
+        sock.onmessage = function (event) {
+            console.log(event);
+            log.innerHTML += event.data
+
+
+        }
+        document.querySelector('button').onclick = function () {
+
+
+            var text = document.getElementById('text').value;
+            sock.send(text)
+        };
+    </script>
+
+</body>
+
+</html>

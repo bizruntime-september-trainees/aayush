@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="inde.js"></script>
+   
+    <button>say hello</button>
+   
+    
+    <script>
+        //creating web socket
+        var sock = new WebSocket("ws://localhost:5001");
+        //wesocket connection status changes to 1 i.e ready to send and recieve data
+        sock.onopen=function(event){
+            alert('socket connected');
+            setTimeout(function(){
+
+            //sending data to the server 
+            sock.send("hey hiii got ur message");
+        },1000);
+
+        };
+        //recieving message from server we use this
+        sock.onmessage=function(event){
+            console.log(event);
+           
+
+        }
+        document.querySelector('button').onclick= function(){
+            
+            sock.send("hello");
+        };
+    </script>
+    
+</body>
+</html>
