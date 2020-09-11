@@ -1,0 +1,76 @@
+.home {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, rgba(169, 169, 169, 0.4), rgba(169, 169, 169, 0.3)), url("../scss1/img1.jpg") center top;
+  background-size: cover;
+}
+
+.home__name {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid set-text-color(darkgrey);
+}
+
+.home__name--last {
+  color: #ec4a0a;
+  font-weight: 700;
+}
+
+body {
+  background-color: darkgrey;
+  color: white;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+main .social-icons {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+main .social-icons a {
+  background-color: darkgrey;
+  padding: 0.4 rem;
+}
+
+main .social-icons a:hover {
+  color: #ec4a0a;
+}
+
+main footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1 rem;
+  color: lightblue;
+}
+/*# sourceMappingURL=main.css.map */

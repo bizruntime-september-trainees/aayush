@@ -1,0 +1,79 @@
+//Sass extends CSS's @import rule with the ability to import Sass and CSS stylesheets
+//, providing access to mixins, functions, and variables and combining multiple stylesheets' CSS together
+@import './resets';
+@import './variables';
+
+//Functions allow you to define complex operations on SassScript values that you can re-use throughout your stylesheet
+@function weight($weight-name){
+    @return map-get($font-weights , $weight-name );
+}
+//they can contain style rules of their own that can be nested in other rules 
+//blocks of code repeating in style sheet
+@mixin flexcenter($direction) {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: $direction;
+    
+}
+@mixin theme($light-theme:true) {
+   //flow control
+    @if $light-theme {
+        background:lighten($primary-color,100%);
+        color: darken($text-color,100%);
+        
+    }
+    
+}
+@mixin mobile {
+    @media (max-width:  $mobile){
+    @content;
+    }
+    
+    
+}
+
+//$ is variable in sass (syntactically awesome style sheet)
+//assings a value 
+$font-weights:(
+    "regular":400,
+    "medium":500,
+    "bold":700
+);
+
+body{
+    background: $primary-color;
+    color:$text-color;
+    font-weight: map-get($font-weights , bold );
+}
+
+.main{
+    //side by side display is flex
+     @include flexcenter(row);
+    width: 80% -40%;
+    margin:0 auto;
+    //nesting is done here
+    //without typing main we can use &=parents
+    #{&}__paragraph1{
+        font-weight: weight(regular );
+
+        &:hover{
+            color:pink;
+        }
+    #{&}__paragraph2 {
+        @extend .main__paragraph1;
+        &:hover{
+            color:$accent-color;
+        }
+    }    
+
+    }
+    @include mobile{
+        flex-direction:column ;
+    }
+
+}
+
+.light{
+    @include theme($light-theme: true);
+}
