@@ -1,0 +1,28 @@
+Live Demo
+<!DOCTYPE HTML>
+
+<html>
+   <head>
+      <title>Big for loop</title>
+      
+      <script>
+         function looping() {
+            
+            for (var i = 0; i <= 10000; i += 1) {
+               var j = i;
+            }
+            alert("Completed " + j + "iterations" );
+         }
+         
+         function greet(){
+            alert("Hello welcome to my page..." );
+         }
+      </script>
+      
+   </head>
+   
+   <body>
+      <input type = "button" onclick = "looping();" value = "looping " />
+      <input type = "button" onclick = "greet();" value = "greet once" />
+   </body>
+</html>

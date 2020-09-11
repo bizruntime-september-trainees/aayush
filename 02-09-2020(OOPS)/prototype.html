@@ -1,0 +1,17 @@
+<script>
+  function employee(fname,lname)
+  {
+      this.fname=fname;
+      this.lname=lname;
+
+  }
+  employee.prototype.fullname=function()
+  {
+      return this.fname+" "+this.lname;
+  }
+  var emp= new employee("aaysh","kumar");
+  var emp1=new employee("ram","kumar");
+  document.writeln(emp+fullname()+"</br>");
+  document.writeln(emp1+fullname());
+
+</script>

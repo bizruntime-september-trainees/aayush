@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //instance member
+        var Fruit = function (type) {
+            this.Fruit = Fruit;
+            this.price = 250;
+        };
+        var apple = new Fruit('kashmiri');
+        var mango = new Fruit('malda');
+
+        //prototype member
+        Fruit.prototype.color = 'anything'
+        document.write(apple.color);
+        document.write(mango.color);
+
+        console.log(apple);
+        console.log(mango);
+    </script>
+
+</body>
+
+</html>
