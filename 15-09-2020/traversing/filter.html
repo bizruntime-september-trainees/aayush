@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Filtering the Selection of Elements</title>
+    <style>
+        .highlight {
+            background: red;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("ul li").filter(":even").addClass("highlight");
+        });
+    </script>
+</head>
+
+<body>
+    <h2>Biscuites list</h2>
+    <ul>
+        <li>britania</li>
+        <li>sweet and ssalty</li>
+        <li>Namkeen one</li>
+        <li>parle g biscuit</li>
+    </ul>
+    <hr>
+    <h2>fruits list</h2>
+    <ul>
+        <li>strawberry</li>
+        <li>banana</li>
+        <li>Mango</li>
+        <li>Apple</li>
+    </ul>
+</body>
+
+</html>

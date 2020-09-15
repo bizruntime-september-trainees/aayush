@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js">
+                </script>
+    <style type="text/css">
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <br />
+    <button id="animate">Animate Me</button>
+    <script type="text/javascript">
+        $("#animate").click(function () {
+            $("div").animate({
+                width: "200px",
+                height: "200px",
+                borderRadius: "50%",
+                marginLeft: "210px",
+                marginTop: "70px",
+            },
+                2000,
+            );
+        }); 
+    </script>
+    </body>
+    
+    </html>
