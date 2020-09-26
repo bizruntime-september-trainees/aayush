@@ -1,0 +1,15 @@
+<ejs-treegrid [dataSource]="data" childMapping="subtasks" [treeColumnIndex]="1" [allowPaging]="true"
+ [pageSettings]="pageSettings" [allowSorting]="true" [sortSettings]="SortSettings" [allowFiltering]="true">
+  <e-columns>
+   <e-column
+    field="taskID"
+    headerText="TaskID"
+    textAlign="Left"
+    width="90" >
+   </e-column>
+   <e-column field="taskName" headerText="Task Name" textAlign="Left" width="160">
+   </e-column>
+   <e-column field="startDate" headerText="Start date" textAlign="Right" width="100" format="yMEd">
+   </e-column>
+  </e-columns>
+</ejs-treegrid>
