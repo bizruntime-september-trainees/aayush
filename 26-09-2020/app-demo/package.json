@@ -1,0 +1,34 @@
+{
+  "name": "ionic-docs-demo",
+  "private": true,
+  "version": "0.0.1",
+  "description": "ionic-docs-demo",
+  "license": "MIT",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "lint": "eslint src/ --ext .js,.ts,.jsx,.tsx",
+    "lint.fix": "lint -- --fix",
+    "build": "stencil build",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "dependencies": {
+    "@ionic/core": "^5.0.6"
+  },
+  "devDependencies": {
+    "@stencil/core": "1.11.2",
+    "@types/jest": "24.0.20",
+    "@types/puppeteer": "1.19.0",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "eslint": "^6.8.0",
+    "jest": "25.1.0",
+    "jest-cli": "25.1.0",
+    "puppeteer": "2.1.0",
+    "typescript": "^3.8.3"
+  }
+}
