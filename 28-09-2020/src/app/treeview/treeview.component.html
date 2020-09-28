@@ -1,0 +1,35 @@
+<input type="text" placeholder="search" #searchFld />
+
+<button (click)="search(searchFld.value)">Find</button>
+<button (click)="searchReset()">Reset</button>
+
+<header>
+  <button (click)="addChild.next(0)">Add</button>
+</header>
+
+<ul class="root-level">
+  <ng-template #levelList let-parent>
+    <li *ngFor="let item of getItemsAtParent(parent)" [ngClass]="{'found': found.includes(item)}">
+      <span class="badge">
+        <span class="expando" (click)="toggle(item.id)" [ngClass]="{'expanded': opened.has(item.id)}">
+          <ng-container *ngIf="hasChildren(item.id)">▶</ng-container>
+        </span>
+        <span>{{item.title}} <small class="debug">(ID: {{item.id}})</small></span>
+        <span>
+          <button (click)="addChild.next(item.id)">Add</button>
+          <button (click)="removeChild.next(item.id)">Remove</button>
+        </span>
+      </span>
+
+      <ng-container *ngIf="opened.has(item.id)">
+        <ul>
+          <ng-container *ngTemplateOutlet="levelList; context: {$implicit: item.id}"></ng-container>
+        </ul>
+      </ng-container>
+    </li>
+  </ng-template>
+  <ng-container *ngTemplateOutlet="levelList; context: {$implicit: 0}"></ng-container>
+</ul>
+
+<button (click)="collapseAll()">Collapse All</button>
+<button (click)="expandAll()">Expand All</button>
