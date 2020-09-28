@@ -1,0 +1,54 @@
+<div class="header color">
+  <h1>Registration form</h1>
+</div>
+
+<section>
+  <form id="form">
+    <div class="row form">
+    <div class="col-md-12" *ngFor="let control of dynamicFormArray">
+    <div [ngSwitch]="control.Type">
+       <div *ngSwitchCase="'input'">
+         <div class="col-md-4">
+            <label>{{control.Label}}</label>
+         </div>
+         <div class="col-md-6">
+            <input type="text" class="form-control">
+         </div>
+
+       </div>
+        <div *ngSwitchCase="'date'">
+          <div class="col-md-4">
+            <label>{{control.Label}}</label>
+          </div>
+          <div class="col-md-6">
+            <input type="date" class="form-control">
+          </div>
+
+        </div>
+        <div *ngSwitchCase="'radio'">
+          <div class="col-md-4">
+            <label>{{control.radio}}</label>
+          </div>
+          <div class="col-md-6">
+            <input type="radio" class="form-control">
+          </div>
+
+        </div>
+        <div *ngSwitchCase="'select'">
+          <div class="col-md-4">
+            <label>{{control.select}}</label>
+          </div>
+          <div class="col-md-6">
+            <input type="select" class="form-control">
+          </div>
+
+        </div>
+    </div>
+
+    </div>
+
+
+
+    </div>
+  </form>
+</section>
