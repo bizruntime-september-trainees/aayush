@@ -1,0 +1,62 @@
+[
+  {
+    "id": "first name",
+    "label": "firstname",
+    "type": "input",
+    "value": ""
+  },
+  {
+    "id": "Last name",
+    "label": "lastname",
+    "type": "input",
+    "value": ""
+  },
+  {
+    "id": "Mobileno",
+    "label": "dateofbirth",
+    "type": "date",
+    "value": ""
+  },
+  {
+    "id": "emailid",
+    "label": "email",
+    "type": "input",
+    "value": ""
+  },
+  {
+    "id": "Gender",
+    "label": "gender",
+    "type": "radio",
+    "value": ""
+  },
+  {
+    "id": "DOB",
+    "label": "dateofbirth",
+    "type": "date",
+    "value": ""
+  },
+  {
+    "id": "Address",
+    "label": "address",
+    "type": "input",
+    "value": ""
+  },
+  {
+    "id": "City",
+    "label": "city",
+    "type": "select",
+    "value": "Patna, Delhi, mumbai,bangalore, kanpur,ranchi"
+  },
+  {
+    "id": "State",
+    "label": "state",
+    "type": "select",
+    "value": "Bihar, Delhi, Maharastra, Karnataka, Uttarpradesh, Jharkhand"
+  },
+  {
+    "id": "pincode",
+    "label": "pincode",
+    "type": "input",
+    "value": ""
+  }
+]
